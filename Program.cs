@@ -42,6 +42,7 @@ namespace SMBClone
         private void calcMove()
         {
 
+
             if (pressed)
             {
                 pos = new Point(pos.X + (int)veloHor, pos.Y + (int)veloVert); 
@@ -77,34 +78,37 @@ namespace SMBClone
                     veloVert= 0;
                     pos = new Point(pos.X,ScreenHeight - 1);
                 }
-                
-            
 
-
+            if(colision(pos, veloVert, floor))
+            {
+                veloVert = 0;
+                pos = new Point(pos.X, floor);
+            }
         }
+
         private void drawAgent()
         {
             DrawText(new Point(10, 10), "Score: "+points, Pixel.Presets.White);
 
             DrawLine(new Point(0, floor), new Point (ScreenHeight, floor), Pixel.Presets.Brown);
 
-            Draw(pos,Pixel.Presets.Red);
+            Draw(pos,Pixel.Presets.Black);
         }
 
         private void reset()
         {
-            pos = new Point(ScreenHeight/2, ScreenWidth / 2);
-            pointsText=new Point(10, 10);
             veloHor = 0;
             veloVert = 0;
-            floor = ScreenHeight;
+            floor = ScreenHeight-15;
             points = 0;
             time = 0;
+            pointsText=new Point(10, 10);
+            pos = new Point(ScreenWidth/2, floor);
         }
 
         private void debugLog()
         {
-            System.Console.Write("Horizontal Velocity: {0}  Vertical Velocity: {1}  X:{2}  Y{3} \n",veloHor,veloVert,pos.X,pos.Y);
+            System.Console.Write("Horizontal Velocity: {0}  Vertical Velocity: {1}  X: {2}  Y: {3} \n",veloHor,veloVert,pos.X,pos.Y);
         }
 
         public override void OnKeyDown(Key k)
