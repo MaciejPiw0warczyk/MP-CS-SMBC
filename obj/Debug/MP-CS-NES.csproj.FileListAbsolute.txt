@@ -1,0 +1,9 @@
+H:\DEV\MP-CS-NES\bin\Debug\MP-CS-NES.exe.config
+H:\DEV\MP-CS-NES\bin\Debug\MP-CS-NES.exe
+H:\DEV\MP-CS-NES\bin\Debug\MP-CS-NES.pdb
+H:\DEV\MP-CS-NES\obj\Debug\MP-CS-NES.csproj.AssemblyReference.cache
+H:\DEV\MP-CS-NES\obj\Debug\MP-CS-NES.csproj.SuggestedBindingRedirects.cache
+H:\DEV\MP-CS-NES\obj\Debug\MP-CS-NES.csproj.CoreCompileInputs.cache
+H:\DEV\MP-CS-NES\obj\Debug\MP-CS-NES.csproj.CopyComplete
+H:\DEV\MP-CS-NES\obj\Debug\MP-CS-NES.exe
+H:\DEV\MP-CS-NES\obj\Debug\MP-CS-NES.pdb
