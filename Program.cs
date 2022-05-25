@@ -29,12 +29,11 @@ namespace SMBClone
         public override void OnCreate()
         {
             Enable(Subsystem.HrText);
-
             reset();
         }
         public override void OnUpdate(float elapsed)
         {
-            Clear(Pixel.Presets.Maroon);
+            Clear(Pixel.Presets.Grey) ;
 
             timeLeft= timeEnd-DateTime.Now;
 
@@ -99,7 +98,7 @@ namespace SMBClone
             //draw Points
             DrawTextHr(new Point(450, 10), "Score: " + points, Pixel.Presets.Blue, 2);
             //draw Time todo
-            DrawTextHr(new Point(700, 10), "Time: " + timeLeft.Ticks, Pixel.Presets.Beige, 2);
+            DrawTextHr(new Point(700, 10), "Time: " + timeLeft.TotalSeconds, Pixel.Presets.Beige, 2);
 
             { 
             //DrawLine(new Point(50,0), new Point(50, ScreenHeight),Pixel.Presets.Black);
@@ -110,7 +109,7 @@ namespace SMBClone
 
             DrawLine(new Point(0, floor), new Point (ScreenHeight, floor), Pixel.Presets.Brown);
 
-            Draw(pos,Pixel.Presets.DarkMagenta);
+            Draw(pos,Pixel.FromRgb(0x3300ff));
         }
 
         private void reset()
@@ -124,7 +123,7 @@ namespace SMBClone
             natan = true;
 
             timeStart = DateTime.Now;
-            timeEnd = timeStart.AddMinutes(3);
+            timeEnd = timeStart.AddMinutes(13.33);
         }
 
         private void debugLog()
@@ -171,7 +170,7 @@ namespace SMBClone
         {
             switch (k)
             {
-                case Key.K8:
+                case Key.O:
                     points++;
                     break;
 
@@ -182,7 +181,6 @@ namespace SMBClone
 
         }
 
-
         private string player()
         {
             if (natan)
@@ -190,6 +188,7 @@ namespace SMBClone
             else
                 return "Tomek";
         }
+
         private bool colision(Point startingPoint, float velocity, int collisionPoint)
         {
             int endPoint=startingPoint.Y+(int)velocity;

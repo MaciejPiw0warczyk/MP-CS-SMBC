@@ -7,3 +7,7 @@ H:\DEV\MP-CS-NES\obj\Debug\MP-CS-NES.csproj.CoreCompileInputs.cache
 H:\DEV\MP-CS-NES\obj\Debug\MP-CS-NES.csproj.CopyComplete
 H:\DEV\MP-CS-NES\obj\Debug\MP-CS-NES.exe
 H:\DEV\MP-CS-NES\obj\Debug\MP-CS-NES.pdb
+H:\DEV\MP-CS-NES\bin\Debug\MP-CS-NES.exe.manifest
+H:\DEV\MP-CS-NES\bin\Debug\MP-CS-NES.application
+H:\DEV\MP-CS-NES\obj\Debug\MP-CS-NES.exe.manifest
+H:\DEV\MP-CS-NES\obj\Debug\MP-CS-NES.application
